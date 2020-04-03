@@ -3,7 +3,7 @@ set -e
 statusURL=$(curl "https://eforms.gov.gg/portal/ServiceStatus.asp")
 if [ "$statusURL" == "000 - System running normal" ]
 then
-        exit 0;
+        exit 1;
 else
         exit -1
 fi
