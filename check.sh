@@ -3,8 +3,9 @@ set -e
 statusURL=$(curl "https://eforms.gov.gg/portal/ServiceStatus.asp")
 if [ "$statusURL" == "000 - System running normal" ]
 then
-	echo "agelisys is down.................."
-        exit 1;
+	echo -e "\033[0;32m Agelisys is up.................."
+        exit 0;
 else
-        exit -1
+	echo -e "\033[0;31m Agelisys is down.................."
+        exit 1;
 fi
